@@ -1,3 +1,10 @@
+strongswan (5.2.1-5+epi1) unstable; urgency=medium
+
+  * Enable default DES/3DES software implementation plugin
+  * Install DES/3DES plugin in libcharon-extra-plugins package
+
+ -- Bruno Maitre <bruno.maitre@gmail.com>  Sun, 15 Mar 2015 05:23:00 +0100
+
 strongswan (5.2.1-5) unstable; urgency=high
 
   * debian/patches:
