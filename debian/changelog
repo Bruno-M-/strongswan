@@ -1,3 +1,10 @@
+strongswan (5.2.1-5+epi2) unstable; urgency=medium
+
+  * Enable MD4 software implementation plugin. Required for eap-mschapv2 plugin
+  * Install MD4 plugin in libcharon-extra-plugins package
+
+ -- Bruno Maitre <bruno.maitre@gmail.com>  Sun, 15 Mar 2015 13:27:49 +0100
+
 strongswan (5.2.1-5+epi1) unstable; urgency=medium
 
   * Enable default DES/3DES software implementation plugin
