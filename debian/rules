@@ -86,6 +86,10 @@ override_dh_install:
 	# first special cases
 ifeq ($(DEB_BUILD_ARCH_OS),linux)
 	# handle Linux-only plugins
+	dh_install -p libcharon-extra-plugins usr/lib/ipsec/plugins/libstrongswan-des.so
+	dh_install -p libcharon-extra-plugins usr/share/strongswan/templates/config/plugins/des.conf
+	dh_install -p libcharon-extra-plugins etc/strongswan.d/charon/des.conf
+
 	dh_install -p libcharon-extra-plugins usr/lib/ipsec/plugins/libstrongswan-dhcp.so
 	dh_install -p libcharon-extra-plugins usr/share/strongswan/templates/config/plugins/dhcp.conf
 	dh_install -p libcharon-extra-plugins etc/strongswan.d/charon/dhcp.conf
@@ -138,6 +142,7 @@ endif
 		-X\.la -X\.a \
 		-Xmedsrv -Xman3 \
 		-Xlibstrongswan-kernel- -X kernel- \
+		-Xlibstrongswan-des.so -X des.conf \
 		-Xlibstrongswan-dhcp.so -X dhcp.conf \
 		-Xlibstrongswan-farp.so -X farp.conf \
 		-Xlibstrongswan-padlock.so -X padlock.conf \
